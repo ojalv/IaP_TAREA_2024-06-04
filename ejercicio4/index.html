@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gestion de cuentas</title>
+</head>
+
+<body>
+    <h1>Sistema de gestion Bancaria</h1>
+
+    <div class="section">
+        <div id="panel-creacion" class="box1">
+            <h2>Crear cuenta</h2>
+            <p>selecciona el boton para crear una nueva bancaria</p>
+            <button id="crearCuentaBtn" class="confirmBtn">crear cuenta</button>
+            <div class="container">
+                <form action="#" class="popUpPanel inactive " id="formularioNuevaCuenta">
+                    <h2>Complete los datos para crear la cuenta</h2>
+                    <label for="nombreTitularInp"><span>Nombre titular:</span><input type="text" name="nombreTitularInp"
+                            id="nombreTitularInp"></label>
+                    <label for="saldoInicialInp"><span>Saldo inicial:</span><input type="text" name="saldoInicialInp"
+                            id="saldoInicialInp"></label>
+                    <button type="submit" id="confirmarNuevaCuentaBtn" class="confirmBtn">Confirmar</button> <button
+                        type="reset" id="cancelarNuevaCuentaBtn" class="cancelBtn">Cancelar</button>
+                </form>
+            </div>
+            <div class="inactive opacity" id="opacityForm"></div>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Cuentas registradas</h2>
+        <p>Selecciona una cuenta para ver su informacion</p>
+
+        <div id="cuentasRegistradas">
+            <!-- <div class="card" id=${id}>
+                <h3>${titular}</h3>
+                <span>cuenta Nro ${indexOf}</span>
+            </div> -->
+        </div>
+        <div id="userPanel" class="popUpPanel inactive">
+            <div class="inactive" id="id-usuario"></div>
+            <h3>Informacion personal</h3>
+            <div class="info-row">
+                <i><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#000000">
+                        <path
+                            d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z" />
+                    </svg></i><span id="nombrePanelUsuario">Alvaro</span>
+            </div>
+            <h3>Saldo de la cuenta</h3>
+            <div class="info-row">
+                <i><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#000000">
+                        <path
+                            d="M200-280v-280h80v280h-80Zm240 0v-280h80v280h-80ZM80-120v-80h800v80H80Zm600-160v-280h80v280h-80ZM80-640v-80l400-200 400 200v80H80Zm178-80h444-444Zm0 0h444L480-830 258-720Z" />
+                    </svg></i><span id="saldoPanelUsuario">$1234656</span>
+            </div>
+            <h3>Historial de transacciones</h3>
+            <div class="overflow-y" id="historialPanelUsuario">
+
+            </div>
+            <button class="confirmBtn" id="depositoBtn">Deposito</button>
+            <button class="confirmBtn" id="extraccionBtn">Extraccion</button>
+            <button class="cancelBtn" id="volverBtn">Volver</button>
+        </div>
+        <div class="opacity inactive" id="opacityUserPanel"></div>
+
+    </div>
+
+    <script src="ejercicio4.js"></script>
+</body>
+
+</html>
